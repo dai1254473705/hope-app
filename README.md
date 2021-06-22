@@ -1,2 +1,15 @@
-# hope-app
-个人网站，基于dva,react
+# umi project
+
+## Getting Started
+
+Install dependencies,
+
+```bash
+$ yarn
+```
+
+Start the dev server,
+
+```bash
+$ yarn start
+```
