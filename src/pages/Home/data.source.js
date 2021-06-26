@@ -10,14 +10,17 @@ export const Banner10DataSource = {
         bg: { className: 'bg bg0' },
         title: {
           className: 'banner1-title',
-          children:
-            'https://zos.alipayobjects.com/rmsportal/HqnZZjBjWRbjyMr.png',
+          children: 'http://static.netyali.cn/image/icon-camera.png',
         },
         content: {
           className: 'banner1-content',
-          children: '一个高效的页面动画解决方案',
+          children: '你看世界，我看你，用影像理解世界,以镜头记录时代。',
         },
-        button: { className: 'banner1-button', children: 'Learn More' },
+        button: {
+          className: 'banner1-button',
+          children: 'Learn More',
+          url: '',
+        },
       },
       {
         name: 'elem1',
@@ -26,31 +29,34 @@ export const Banner10DataSource = {
         bg: { className: 'bg bg1' },
         title: {
           className: 'banner1-title',
-          children:
-            'https://zos.alipayobjects.com/rmsportal/HqnZZjBjWRbjyMr.png',
+          children: 'http://static.netyali.cn/image/fe.png',
         },
         content: {
           className: 'banner1-content',
-          children: '一个高效的页面动画解决方案',
+          children: '如果你真的很想学习某一种技术，那么就亲自动手写代码。',
         },
-        button: { className: 'banner1-button', children: 'Learn More' },
+        button: {
+          className: 'banner1-button',
+          children: 'Learn More',
+          url: '',
+        },
       },
-      {
-        name: 'elem2',
-        BannerElement: { className: 'banner-user-elem' },
-        textWrapper: { className: 'banner1-text-wrapper' },
-        bg: { className: 'bg bg1' },
-        title: {
-          className: 'banner1-title',
-          children:
-            'https://zos.alipayobjects.com/rmsportal/HqnZZjBjWRbjyMr.png',
-        },
-        content: {
-          className: 'banner1-content',
-          children: '一个高效的页面动画解决方案',
-        },
-        button: { className: 'banner1-button', children: 'Learn More' },
-      },
+      // {
+      //   name: 'elem2',
+      //   BannerElement: { className: 'banner-user-elem' },
+      //   textWrapper: { className: 'banner1-text-wrapper' },
+      //   bg: { className: 'bg bg1' },
+      //   title: {
+      //     className: 'banner1-title',
+      //     children:
+      //       'https://zos.alipayobjects.com/rmsportal/HqnZZjBjWRbjyMr.png',
+      //   },
+      //   content: {
+      //     className: 'banner1-content',
+      //     children: '一个高效的页面动画解决方案',
+      //   },
+      //   button: { className: 'banner1-button', children: 'Learn More' },
+      // },
     ],
   },
 };
@@ -68,20 +74,18 @@ export const Teams00DataSource = {
           children: [
             {
               name: 'image',
-              children:
-                'https://gw.alipayobjects.com/mdn/rms_ae7ad9/afts/img/A*njqxS5Ky7CQAAAAAAAAAAABjARQnAQ',
+              children: 'http://static.netyali.cn/image/avatar.jpg',
               className: 'teams0-image',
             },
             {
               name: 'content',
-              children:
-                'SEE = Seeking Experience & Engineering，意为探索用户体验与工程实践，由蚂蚁金服集团每年举办 1-2 次，包括专业分享、产品展台、Workshop 等内容。',
+              children: '生活不只有眼前的苟且，还有长远的凑合。',
               className: 'teams0-content',
             },
-            { name: 'title', children: '韩勇', className: 'teams0-h1' },
+            { name: 'title', children: '代小呆', className: 'teams0-h1' },
             {
               name: 'content2',
-              children: '公司+职位 信息暂缺',
+              children: '前端开发+摄影爱好者',
               className: 'teams0-content',
             },
           ],
@@ -95,20 +99,19 @@ export const Teams00DataSource = {
           children: [
             {
               name: 'image',
-              children:
-                'https://gw.alipayobjects.com/mdn/rms_ae7ad9/afts/img/A*--rVR4hclJYAAAAAAAAAAABjARQnAQ',
+              children: 'http://static.netyali.cn/image/desktop.jpg',
               className: 'teams0-image',
             },
             {
               name: 'content',
               children:
-                'SEE = Seeking Experience & Engineering，意为探索用户体验与工程实践，由蚂蚁金服集团每年举办 1-2 次，包括专业分享、产品展台、Workshop 等内容。',
+                '羡慕那些冷漠无情说走就走的人，我不行，我走的时候还得拿你点儿吃的。',
               className: 'teams0-content',
             },
-            { name: 'title', children: '叶秀英', className: 'teams0-h1' },
+            { name: 'title', children: '杨小慧', className: 'teams0-h1' },
             {
               name: 'content2',
-              children: '公司+职位 信息暂缺',
+              children: '前端开发+摄影爱好者+公众号博主+掘金博主',
               className: 'teams0-content',
             },
           ],

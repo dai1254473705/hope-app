@@ -1,5 +1,5 @@
 import React from 'react';
-import { Button } from 'antd';
+import { Button, message } from 'antd';
 import { DownOutlined } from '@ant-design/icons';
 import QueueAnim from 'rc-queue-anim';
 import TweenOne, { TweenOneGroup } from 'rc-tween-one';
@@ -9,11 +9,13 @@ import 'rc-banner-anim/assets/index.css';
 
 const { BgElement } = Element;
 class Banner extends React.PureComponent {
+  routerTap(url) {
+    if (!url) {
+      message.info('敬请期待~');
+    }
+  }
   render() {
-    const { ...props } = this.props;
-    const { dataSource } = props;
-    delete props.dataSource;
-    delete props.isMobile;
+    const { dataSource, isMobile, ...props } = this.props;
     const childrenToRender = dataSource.BannerAnim.children.map((item, i) => {
       const elem = item.BannerElement;
       const elemClassName = elem.className;
@@ -23,12 +25,12 @@ class Banner extends React.PureComponent {
         <Element key={i.toString()} {...elem} prefixCls={elemClassName}>
           <BgElement key="bg" {...bg} />
           <QueueAnim
-            type={['bottom', 'top']}
+            type={['top', 'bottom']}
             delay={200}
             key="text"
             {...textWrapper}
           >
-            <div key="logo" {...title}>
+            <div key="logo" className={title.className}>
               {typeof title.children === 'string' &&
               title.children.match(isImg) ? (
                 <img src={title.children} width="100%" alt="img" />
@@ -36,10 +38,15 @@ class Banner extends React.PureComponent {
                 title.children
               )}
             </div>
-            <div key="content" {...content}>
+            <div key="content" className={content.className}>
               {content.children}
             </div>
-            <Button ghost key="button" {...button}>
+            <Button
+              ghost
+              key="button"
+              className={button.className}
+              onClick={() => this.routerTap(button.url)}
+            >
               {button.children}
             </Button>
           </QueueAnim>
@@ -62,7 +69,7 @@ class Banner extends React.PureComponent {
         </TweenOneGroup>
         <TweenOne
           animation={{
-            y: '-=20',
+            y: '20',
             yoyo: true,
             repeat: -1,
             duration: 1000,

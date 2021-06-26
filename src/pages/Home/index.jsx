@@ -1,5 +1,3 @@
-/* eslint no-undef: 0 */
-/* eslint arrow-parens: 0 */
 import React from 'react';
 import { enquireScreen } from 'enquire-js';
 
@@ -35,8 +33,8 @@ export default class Home extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      isMobile,
-      show: !location.port, // 如果不是 dva 2.0 请删除
+      isMobile: false,
+      show: false,
     };
   }
 
@@ -60,6 +58,12 @@ export default class Home extends React.Component {
 
   render() {
     const children = [
+      // <Nav3
+      //   id="Nav3_0"
+      //   key="Nav3_0"
+      //   dataSource={Nav30DataSource}
+      //   isMobile={this.state.isMobile}
+      // />,
       <Banner1
         id="Banner1_0"
         key="Banner1_0"
@@ -72,50 +76,40 @@ export default class Home extends React.Component {
         dataSource={Teams00DataSource}
         isMobile={this.state.isMobile}
       />,
-      <Content5
-        id="Content5_0"
-        key="Content5_0"
-        dataSource={Content50DataSource}
-        isMobile={this.state.isMobile}
-      />,
-      <Feature2
-        id="Feature2_0"
-        key="Feature2_0"
-        dataSource={Feature20DataSource}
-        isMobile={this.state.isMobile}
-      />,
-      <Nav3
-        id="Nav3_0"
-        key="Nav3_0"
-        dataSource={Nav30DataSource}
-        isMobile={this.state.isMobile}
-      />,
-      <Feature8
-        id="Feature8_0"
-        key="Feature8_0"
-        dataSource={Feature80DataSource}
-        isMobile={this.state.isMobile}
-      />,
-      <Feature7
-        id="Feature7_0"
-        key="Feature7_0"
-        dataSource={Feature70DataSource}
-        isMobile={this.state.isMobile}
-      />,
-      <Footer1
-        id="Footer1_0"
-        key="Footer1_0"
-        dataSource={Footer10DataSource}
-        isMobile={this.state.isMobile}
-      />,
+      // <Content5
+      //   id="Content5_0"
+      //   key="Content5_0"
+      //   dataSource={Content50DataSource}
+      //   isMobile={this.state.isMobile}
+      // />,
+      // <Feature2
+      //   id="Feature2_0"
+      //   key="Feature2_0"
+      //   dataSource={Feature20DataSource}
+      //   isMobile={this.state.isMobile}
+      // />,
+
+      // <Feature8
+      //   id="Feature8_0"
+      //   key="Feature8_0"
+      //   dataSource={Feature80DataSource}
+      //   isMobile={this.state.isMobile}
+      // />,
+      // <Feature7
+      //   id="Feature7_0"
+      //   key="Feature7_0"
+      //   dataSource={Feature70DataSource}
+      //   isMobile={this.state.isMobile}
+      // />,
+      // <Footer1
+      //   id="Footer1_0"
+      //   key="Footer1_0"
+      //   dataSource={Footer10DataSource}
+      //   isMobile={this.state.isMobile}
+      // />,
     ];
     return (
-      <div
-        className="templates-wrapper"
-        ref={(d) => {
-          this.dom = d;
-        }}
-      >
+      <div className="templates-wrapper">
         {/* 如果不是 dva 2.0 替换成 {children} start */}
         {this.state.show && children}
         {/* 如果不是 dva 2.0 替换成 {children} end */}
