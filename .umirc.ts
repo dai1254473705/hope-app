@@ -1,8 +1,6 @@
 import { defineConfig } from 'umi';
 
 export default defineConfig({
-  // base: '/server/hope-app/dist',
-  history: { type: 'hash' },
   favicon: '/assets/favicon.ico',
   nodeModulesTransform: {
     type: 'none',
