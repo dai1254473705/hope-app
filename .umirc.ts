@@ -1,7 +1,7 @@
 import { defineConfig } from 'umi';
 import routes from './config/routes';
 export default defineConfig({
-  publicPath: '/static/',
+  // publicPath: '/static/',
   favicon: '/static/favicon.ico',
   nodeModulesTransform: {
     type: 'none',
