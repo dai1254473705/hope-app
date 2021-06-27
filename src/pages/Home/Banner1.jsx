@@ -4,7 +4,7 @@ import { DownOutlined } from '@ant-design/icons';
 import QueueAnim from 'rc-queue-anim';
 import TweenOne, { TweenOneGroup } from 'rc-tween-one';
 import BannerAnim, { Element } from 'rc-banner-anim';
-import { isImg } from './utils';
+import { openNewWindow, isImg } from '@/util';
 import 'rc-banner-anim/assets/index.css';
 
 const { BgElement } = Element;
@@ -12,7 +12,9 @@ class Banner extends React.PureComponent {
   routerTap(url) {
     if (!url) {
       message.info('敬请期待~');
+      return;
     }
+    openNewWindow(url);
   }
   render() {
     const { dataSource, isMobile, ...props } = this.props;

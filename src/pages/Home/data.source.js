@@ -18,7 +18,7 @@ export const Banner10DataSource = {
         },
         button: {
           className: 'banner1-button',
-          children: 'Learn More',
+          children: '查看更多',
           url: '',
         },
       },
@@ -37,8 +37,8 @@ export const Banner10DataSource = {
         },
         button: {
           className: 'banner1-button',
-          children: 'Learn More',
-          url: '',
+          children: '查看更多',
+          url: 'https://netyali.cn/',
         },
       },
       // {

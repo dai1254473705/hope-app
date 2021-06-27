@@ -5,10 +5,11 @@ import Banner1 from './Banner1';
 import Teams0 from './Teams0';
 import Article from '@/components/Article';
 import Feature2 from './Feature2';
-import Nav3 from './Nav3';
+import Nav from './Nav';
 import Feature8 from './Feature8';
 import Feature7 from './Feature7';
-import Footer1 from './Footer1';
+import Footer from './Footer';
+import Footer1 from '@/components/Footer';
 
 import {
   Banner10DataSource,
@@ -57,7 +58,7 @@ export default class Home extends React.Component {
 
   render() {
     const children = [
-      // <Nav3
+      // <Nav
       //   id="Nav3_0"
       //   key="Nav3_0"
       //   dataSource={Nav30DataSource}
@@ -96,12 +97,7 @@ export default class Home extends React.Component {
       //   dataSource={Feature70DataSource}
       //   isMobile={this.state.isMobile}
       // />,
-      <Footer1
-        id="Footer1_0"
-        key="Footer1_0"
-        dataSource={Footer10DataSource}
-        isMobile={this.state.isMobile}
-      />,
+      <Footer1 key="Footer_0" />,
     ];
     return (
       <div className="templates-wrapper">

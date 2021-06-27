@@ -23,41 +23,41 @@ class Article extends React.Component<IProps, {}> {
         />
 
         <div className="card-group">
-          {/* <OverPack> */}
-          <TweenOneGroup
-            component={Row}
-            className="card-tween-group"
-            key="ul"
-            enter={{
-              y: '+=30',
-              opacity: 0,
-              type: 'from',
-              ease: 'easeInOutQuad',
-            }}
-            leave={{ y: '+=30', opacity: 0, ease: 'easeInOutQuad' }}
-          >
-            {[1, 2, 3, 4, 5, 6, 7].map((item) => {
-              return (
-                <div className="comp-card-content" key={item}>
-                  <div className="card-image">
-                    <img
-                      src="http://static.netyali.cn/image/446A1590.jpg"
-                      alt=""
-                    />
+          <OverPack>
+            <TweenOneGroup
+              component={Row}
+              className="card-tween-group"
+              key="ul"
+              enter={{
+                y: '+=30',
+                opacity: 0,
+                type: 'from',
+                ease: 'easeInOutQuad',
+              }}
+              leave={{ y: '+=30', opacity: 0, ease: 'easeInOutQuad' }}
+            >
+              {[1, 2, 3, 4, 5, 6, 7].map((item) => {
+                return (
+                  <div className="comp-card-content" key={item}>
+                    <div className="card-image">
+                      <img
+                        src="http://static.netyali.cn/image/446A1590.jpg"
+                        alt=""
+                      />
+                    </div>
+                    <div className="card-desc">
+                      <p className="card-desc-title">
+                        标题啊大发电房啊方式标题啊大发电房啊方式标题啊大发电房啊方式
+                      </p>
+                      <p className="card-desc-memo">
+                        标题啊大发电房啊方式标题啊大发电房啊方式标题啊大发电房啊方式标题啊大发电房啊方式标题啊大发电房啊方式标题啊大发电房啊方式
+                      </p>
+                    </div>
                   </div>
-                  <div className="card-desc">
-                    <p className="card-desc-title">
-                      标题啊大发电房啊方式标题啊大发电房啊方式标题啊大发电房啊方式
-                    </p>
-                    <p className="card-desc-memo">
-                      标题啊大发电房啊方式标题啊大发电房啊方式标题啊大发电房啊方式标题啊大发电房啊方式标题啊大发电房啊方式标题啊大发电房啊方式
-                    </p>
-                  </div>
-                </div>
-              );
-            })}
-          </TweenOneGroup>
-          {/* </OverPack> */}
+                );
+              })}
+            </TweenOneGroup>
+          </OverPack>
         </div>
       </div>
     );

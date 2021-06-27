@@ -5,11 +5,18 @@ import { getChildrenToRender } from './utils';
 
 const { Item, SubMenu } = Menu;
 
-class Header3 extends React.Component {
-  constructor(props) {
+interface IProps {
+  dataSource: any;
+  isMobile: boolean;
+}
+interface IState {
+  phoneOpen: boolean;
+}
+class Header3 extends React.Component<IProps, IState> {
+  constructor(props: IProps) {
     super(props);
     this.state = {
-      phoneOpen: undefined,
+      phoneOpen: false,
     };
   }
 
