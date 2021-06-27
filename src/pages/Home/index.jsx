@@ -3,7 +3,7 @@ import { enquireScreen } from 'enquire-js';
 
 import Banner1 from './Banner1';
 import Teams0 from './Teams0';
-import Content5 from './Content5';
+import Article from '@/components/Article';
 import Feature2 from './Feature2';
 import Nav3 from './Nav3';
 import Feature8 from './Feature8';
@@ -13,7 +13,6 @@ import Footer1 from './Footer1';
 import {
   Banner10DataSource,
   Teams00DataSource,
-  Content50DataSource,
   Feature20DataSource,
   Nav30DataSource,
   Feature80DataSource,
@@ -76,12 +75,8 @@ export default class Home extends React.Component {
         dataSource={Teams00DataSource}
         isMobile={this.state.isMobile}
       />,
-      // <Content5
-      //   id="Content5_0"
-      //   key="Content5_0"
-      //   dataSource={Content50DataSource}
-      //   isMobile={this.state.isMobile}
-      // />,
+      <Article key="article_09" title="推荐文章" />,
+      <Article key="article_10" title="推荐图片" />,
       // <Feature2
       //   id="Feature2_0"
       //   key="Feature2_0"
@@ -101,12 +96,12 @@ export default class Home extends React.Component {
       //   dataSource={Feature70DataSource}
       //   isMobile={this.state.isMobile}
       // />,
-      // <Footer1
-      //   id="Footer1_0"
-      //   key="Footer1_0"
-      //   dataSource={Footer10DataSource}
-      //   isMobile={this.state.isMobile}
-      // />,
+      <Footer1
+        id="Footer1_0"
+        key="Footer1_0"
+        dataSource={Footer10DataSource}
+        isMobile={this.state.isMobile}
+      />,
     ];
     return (
       <div className="templates-wrapper">
