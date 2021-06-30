@@ -59,13 +59,15 @@ class Footer extends React.Component<{}, {}> {
           ))}
         </div>
         <div className="footer-content">
-          <div className="qr-code" key="1">
-            <p>摄影公众号</p>
-            <img src={qrcodePhoto} alt="" />
-          </div>
-          <div className="qr-code" key="2">
-            <p>前端公众号</p>
-            <img src={qrcodeFe} alt="" />
+          <div className="footer-left">
+            <div className="qr-code" key="1">
+              <p>摄影公众号</p>
+              <img src={qrcodePhoto} alt="" />
+            </div>
+            <div className="qr-code" key="2">
+              <p>前端公众号</p>
+              <img src={qrcodeFe} alt="" />
+            </div>
           </div>
           <div className="footer-right">
             <div className="link-group">
