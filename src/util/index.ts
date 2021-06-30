@@ -1,4 +1,23 @@
 /**
+ * utils 方法
+ */
+import cookie from './cookie';
+import cookieName from './cookieName';
+import session from './session';
+import * as request from './request';
+import timeFormat from './timeFormat';
+import regexp from './regexp';
+
+export default {
+  cookieName,
+  cookie,
+  session,
+  request,
+  timeFormat,
+  regexp,
+};
+
+/**
  * 打开浏览器新窗口
  */
 export const openNewWindow = (url: string) => {

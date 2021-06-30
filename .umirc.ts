@@ -21,4 +21,11 @@ export default defineConfig({
   fastRefresh: {},
   dynamicImport: {},
   devtool: false,
+  proxy: {
+    '/hope': {
+      target: 'http://api.netyali.cn/',
+      changeOrigin: true,
+      pathRewrite: { '^/api': '' },
+    },
+  },
 });
