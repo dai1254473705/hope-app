@@ -181,32 +181,20 @@ export default class EditorPage extends Component<IProps, IState> {
     ];
     return (
       <Layout className="spider">
-        <Breadcrumb className="breadCrumbWrapper">
-          <Breadcrumb.Item>
-            <Link to={{ pathname: '/article/list/' }}>文章</Link>
-          </Breadcrumb.Item>
-          <Breadcrumb.Item>braft-editor编辑器</Breadcrumb.Item>
-        </Breadcrumb>
-        <Content className="my-component">
-          <Divider>
-            下面开始{' '}
-            <Button
-              type="primary"
-              onClick={this.submitContent}
-              className="save-btn"
-            >
-              保存
-            </Button>{' '}
-            你的表演~
-          </Divider>
-          <BraftEditor
-            id="editor-id-1"
-            value={editorState}
-            onChange={this.handleEditorChange}
-            onSave={this.submitContent}
-            extendControls={extendControls}
-          />
-        </Content>
+        <BraftEditor
+          id="editor-id-1"
+          value={editorState}
+          onChange={this.handleEditorChange}
+          onSave={this.submitContent}
+          extendControls={extendControls}
+        />
+        <Button
+          type="primary"
+          onClick={this.submitContent}
+          className="save-btn"
+        >
+          保存
+        </Button>
       </Layout>
     );
   }
